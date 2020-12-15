@@ -1,0 +1,120 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="View\Resources\Axe_icon.png" />
+    <None Remove="View\Resources\Batrider_icon.png" />
+    <None Remove="View\Resources\cunning.png" />
+    <None Remove="View\Resources\Death.png" />
+    <None Remove="View\Resources\Download_Master_Icon.png" />
+    <None Remove="View\Resources\Drow_Ranger_icon.png" />
+    <None Remove="View\Resources\Ember_Spirit_icon.png" />
+    <None Remove="View\Resources\Gyrocopter_icon.png" />
+    <None Remove="View\Resources\Intelligece.png" />
+    <None Remove="View\Resources\Juggernaut_icon.png" />
+    <None Remove="View\Resources\Keeper_of_the_Light_icon.png" />
+    <None Remove="View\Resources\Lion_icon.png" />
+    <None Remove="View\Resources\Lycan_icon.png" />
+    <None Remove="View\Resources\Morphling_icon.png" />
+    <None Remove="View\Resources\Nature%27s_Prophet_icon.png" />
+    <None Remove="View\Resources\Night_Stalker_icon.png" />
+    <None Remove="View\Resources\power.png" />
+    <None Remove="View\Resources\question-mark.png" />
+    <None Remove="View\Resources\Riki_icon.png" />
+    <None Remove="View\Resources\Skywrath_Mage_icon.png" />
+    <None Remove="View\Resources\SpongeBobCard.png" />
+    <None Remove="View\Resources\Techies_icon.png" />
+    <None Remove="View\Resources\Tiny_icon.png" />
+    <None Remove="View\Resources\Tusk_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Resources\Axe_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Batrider_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\cunning.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Abaddon_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Anti-Mage_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Death.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Drow_Ranger_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Ember_Spirit_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Gyrocopter_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Juggernaut_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Keeper_of_the_Light_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Lion_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Lycan_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Morphling_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Nature's_Prophet_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Night_Stalker_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Pudge_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Download_Master_Icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Intelligece.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\power.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\question-mark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Riki_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Skywrath_Mage_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\SpongeBobCard.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Techies_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Tiny_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\Tusk_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
