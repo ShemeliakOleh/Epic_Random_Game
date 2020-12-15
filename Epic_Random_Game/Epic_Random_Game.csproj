@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>MainIcon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,7 @@
     <None Remove="View\Resources\Keeper_of_the_Light_icon.png" />
     <None Remove="View\Resources\Lion_icon.png" />
     <None Remove="View\Resources\Lycan_icon.png" />
+    <None Remove="View\Resources\MainIcon.ico" />
     <None Remove="View\Resources\Morphling_icon.png" />
     <None Remove="View\Resources\Nature%27s_Prophet_icon.png" />
     <None Remove="View\Resources\Night_Stalker_icon.png" />
@@ -79,6 +81,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="View\Resources\Lycan_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Resources\MainIcon.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="View\Resources\Morphling_icon.png">
