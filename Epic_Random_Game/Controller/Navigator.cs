@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Epic_Random_Game.Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -36,7 +39,41 @@ namespace Epic_Random_Game
             mainWindow.mainPage.Navigate(newPage);
         }
 
+        internal static void ShowRating(MainWindow mainWindow)
+        {
+           
+            var newPage = new RatingPage();
+            mainWindow.mainPage.Navigate(newPage);
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                
+                newPage.mainGridData.ItemsSource = db.Players.ToList();
 
+            }
+            
+        }
+
+        internal static void ShowHelp(MainWindow mainWindow)
+        {
+            var newPage = new HelpPage();
+            mainWindow.mainPage.Navigate(newPage);
+        }
+
+        internal static void Play(MainWindow mainWindow)
+        {
+            if (mainWindow.tUserName.Text.Length > 0)
+            {
+                List<DeckOfCards> listOfDecks = new List<DeckOfCards>(CreateDecks());
+                Game currentGame = new Game(listOfDecks[0].Shuffle(), listOfDecks[0].Shuffle());
+                var newPage = new GameProcessPage(currentGame);
+                mainWindow.mainPage.Navigate(newPage);
+            }
+            else
+            {
+                var newPage = new StartPage();
+                mainWindow.mainPage.Navigate(newPage);
+            }
+        }
 
         internal static MainWindow GetParentWindow(Page page)
         {
@@ -82,17 +119,39 @@ namespace Epic_Random_Game
         {
             var mainWindow = GetParentWindow(gameProcessPage);
             var page = new ResultPage();
+            page.tGameResult.Text = "You won!";
+            page.tGameResult.Foreground = new SolidColorBrush(Colors.Green);
+            mainWindow.mainPage.Navigate(page);
             if (IsUserWinner)
             {
-                page.tGameResult.Text = "You won!";
-                page.tGameResult.Foreground = new SolidColorBrush(Colors.Green);
-                mainWindow.mainPage.Navigate(page);
+                SetResult(mainWindow);
             }
             else
             {
                 page.tGameResult.Text = "You lost!";
                 page.tGameResult.Foreground = new SolidColorBrush(Colors.Red);
                 mainWindow.mainPage.Navigate(page);
+            }
+        }
+
+        private static async void SetResult(MainWindow mainWindow)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var players = await db.Players
+                                .Where(p => p.Name == mainWindow.tUserName.Text)
+                                .ToListAsync();
+                if (players.Count > 0)
+                {
+                    players[0].Points++;
+                }
+                else
+                {
+                    Player player = new Player { Name = mainWindow.tUserName.Text, Points = 1 };
+                    db.Players.Update(player);
+                }
+
+                db.SaveChanges();
             }
         }
     }

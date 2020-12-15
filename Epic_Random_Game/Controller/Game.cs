@@ -133,17 +133,42 @@ namespace Epic_Random_Game
                 }
                 if((CurrentUser.CurrentCard.GetAttributeRank(selectedAttribute) == (CurrentBot.CurrentCard.GetAttributeRank(selectedAttribute))))
                 {
-                    if(CurrentUser.CurrentCard.Intelligence > CurrentBot.CurrentCard.Intelligence)
+                if (selectedAttribute.ToLower() == "intelligence")
+                {
+                    if (CurrentUser.CurrentCard.Intelligence > CurrentBot.CurrentCard.Intelligence)
                     {
-                    UserWon = true;
+                        UserWon = true;
                     }
                     else if (CurrentUser.CurrentCard.Intelligence < CurrentBot.CurrentCard.Intelligence)
                     {
-                    UserWon = false;
+                        UserWon = false;
+                    }
+                }
+                else if (selectedAttribute.ToLower() == "power")
+                {
+                    if (CurrentUser.CurrentCard.Power > CurrentBot.CurrentCard.Power)
+                    {
+                        UserWon = true;
+                    }
+                    else if (CurrentUser.CurrentCard.Power < CurrentBot.CurrentCard.Power)
+                    {
+                        UserWon = false;
+                    }
+                }
+                else if (selectedAttribute.ToLower() == "cunning")
+                {
+                    if (CurrentUser.CurrentCard.Cunning > CurrentBot.CurrentCard.Cunning)
+                    {
+                        UserWon = true;
+                    }
+                    else if (CurrentUser.CurrentCard.Cunning < CurrentBot.CurrentCard.Cunning)
+                    {
+                        UserWon = false;
+                    }
                 }
                 else
                 {
-                    if(rnd.Next(0,1) == 0)
+                    if (rnd.Next(0, 1) == 0)
                     {
                         UserWon = false;
                     }

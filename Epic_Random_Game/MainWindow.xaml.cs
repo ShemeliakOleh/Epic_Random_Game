@@ -30,5 +30,25 @@ namespace Epic_Random_Game
         {
             Application.Current.Shutdown();
         }
+
+        private void mItemPlay_Click(object sender, RoutedEventArgs e)
+        {
+            Navigator.Play(this);
+        }
+
+        private void mItemRating_Click(object sender, RoutedEventArgs e)
+        {
+            Navigator.ShowRating(this);
+        }
+
+        private void mItemHelp_Click(object sender, RoutedEventArgs e)
+        {
+            Navigator.ShowHelp(this);
+        }
+
+        private void mItemExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

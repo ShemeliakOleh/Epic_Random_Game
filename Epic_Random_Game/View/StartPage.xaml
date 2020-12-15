@@ -30,7 +30,7 @@
         <TextBox x:Name="TName" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" FontSize="30" VerticalAlignment="Top" FontStretch="Expanded">
             
         </TextBox>
-        <Button Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Content="Грати" FontSize="40" Click="Button_Click" >
+        <Button Grid.Column="1" Margin="10" Grid.Row="4" Grid.ColumnSpan="3" Content="Грати" FontSize="40" Click="Button_Click" >
             
         </Button>
         

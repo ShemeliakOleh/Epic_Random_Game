@@ -9,6 +9,8 @@
       Title="RatingPage">
 
     <Grid>
-        
+        <DataGrid Name="mainGridData" Background="DarkGray" >
+            
+        </DataGrid>
     </Grid>
 </Page>

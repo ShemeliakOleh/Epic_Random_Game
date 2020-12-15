@@ -9,6 +9,30 @@
       Title="HelpPage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+           
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4" TextWrapping="Wrap" FontSize="20" Foreground="White">
+            У колоді міститься 20 карт. Кожна карта має три характеристики (інтелект, сила, хитрість). Кожна характеристика перебуває в одному з діапазонів: низький рівень: 1-5, середній: 6-10, високий: 11-15. Якщо характеристики одного рівня, то сильніша та, у якої значення більше. У колоді сумарно однакова кількість характеристик кожного рівня. Баланс сил підтримується правилом: 
+Слабка -> Сильна -> Середня -> Слабка
+На кожному ході гравці отримують по одній карті. Один з гравців (а далі по черзі) обирає одну з  характеристик на свій розсуд (може слідкувати за кількістю характеристик), і якщо вона “б’є” таку саму характеристику на карті суперника, то його карта скидається у відбій, а та, що “перемогла”, замішується назад у колоду. Програє той, у кого не залишиться карт. Нічия, якщо в обох гравців залишається по одній однаковій карті.
+
+        </TextBlock >
+        <TextBlock Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+            Author : Oleh Shemeliak
+        </TextBlock>
     </Grid>
 </Page>
